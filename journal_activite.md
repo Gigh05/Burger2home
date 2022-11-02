@@ -32,7 +32,7 @@
 - [x] 2022/10/29 : Push de la base de code Angular nécessaire au projet Burger2home
 
 ## Semaine 44
-- [ ] 2022/11/xx : 
+- [X] 2022/11/01 : Installation et configuration des libraires (Materials, Ngx-translate, NGX Bootstrap, RXJS)
 
 ## Semaine 45
 - [ ] 2022/11/xx : 
