@@ -1,0 +1,42 @@
+.mat-toolbar {
+    background:#fff;
+}
+
+.header-spacer {
+    flex: 1 1 auto;
+}
+
+#logo {
+    width: auto;
+    height: 100%;
+}
+
+.header-icon {
+    color: #388E3C;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active{
+    color: lightgray;
+}
+
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+mat-toolbar{
+    border-radius: 3px;
+}
+
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}

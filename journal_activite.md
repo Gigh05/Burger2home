@@ -33,6 +33,7 @@
 
 ## Semaine 44
 - [X] 2022/11/01 : Installation et configuration des libraires (Materials, Ngx-translate, NGX Bootstrap, RXJS)
+- [X] 2022/11/02 : Ajout du module de routing, d'une page d'accueil, d'un header et d'un menu de navigation
 
 ## Semaine 45
 - [ ] 2022/11/xx : 
