@@ -40,13 +40,13 @@
 - [ ] 2022/11/xx : 
 
 ## Semaine 46
-- [ ] 2022/11/xx : 
+- [x] 2022/11/19 : Rédaction d'un nouveau cachier d'analyse
 
 ## Semaine 47
-- [ ] 2022/11/xx : 
+- [x] 2022/11/26 : Rédaction d'un nouveau cachier d'analyse (fin)
 
 ## Semaine 48
-- [ ] 2022/11/xx : 
+- [x] 2022/11/29 : Remise du cachier d'analyse
 
 ## Semaine 49
 - [ ] 2022/12/xx : 
