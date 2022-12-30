@@ -47,18 +47,19 @@
 
 ## Semaine 48
 - [x] 2022/11/29 : Remise du cachier d'analyse
+- [x] 2022/12/03 : Mise à jour du Swagger
 
 ## Semaine 49
-- [ ] 2022/12/xx : 
+- [x] 2022/12/xx : 
 
 ## Semaine 50
-- [ ] 2022/12/xx : 
+- [x] 2022/12/xx : 
 
 ## Semaine 51
-- [ ] 2022/12/xx : 
+- [x] 2022/12/xx : 
 
 ## Semaine 52
-- [ ] 2022/12/xx : 
+- [x] 2022/12/30 : Mise à jour du Swagger
 
 ## Semaine 1
 - [ ] 2023/01/08 : Code final
