@@ -63,4 +63,5 @@
 - [x] 2023/01/01 : Ajout de la liste des burgers, de la connexion, de l'inscription et du profil
 
 ## Semaine 1
+- [x] 2023/01/05 : Ajout des ingrédients et allergènes sur la carte des burgers
 - [ ] 2023/01/08 : Code final

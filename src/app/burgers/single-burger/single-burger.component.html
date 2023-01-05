@@ -1,19 +1,37 @@
-  <mat-expansion-panel hideToggle class="burger-expansion">
-    <mat-expansion-panel-header class="burger-expansion-header">
-      <img class="burger-expansion-image" [src]="burger.imageUrl">
-      <mat-panel-title>
-        {{ burger.name }}
-      </mat-panel-title>
-      <mat-panel-description>
-        {{ burger.description }}
-      </mat-panel-description>
-    </mat-expansion-panel-header>
+<mat-expansion-panel hideToggle class="burger-expansion">
+  <mat-expansion-panel-header class="burger-expansion-header">
+    <img class="burger-expansion-image" [src]="burger.imageUrl">
+    <mat-panel-title>
+      {{ burger.name }}
+    </mat-panel-title>
+    <mat-panel-description>
+      {{ burger.description }}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <div *ngIf="showIngredients; else showAllergens">
+    <p>Ingrédients</p>
     <ul>
-      <li *ngFor="let ingredient of burger.ingredients">{{ ingredient }}</li>
+      <li *ngFor="let ingredient of burger.ingredients">{{ ingredient.name }}</li>
     </ul>
-    <mat-action-row>
-      <button class="button-warn" mat-flat-button color="warn">{{ "button.allergens" | translate }}</button>
-      <button class="button-classic" mat-flat-button color="primary">{{ "button.choose" | translate }}</button>
-    </mat-action-row>
-  </mat-expansion-panel>
+  </div>
+  <ng-template #showAllergens>
+    <p>Allergens</p>
+    <ul>
+      <li *ngFor="let allergen of burger.allergens">{{ allergen.name }}</li>
+    </ul>
+  </ng-template>  
+  <mat-action-row>
+    <button class="button-warn" mat-flat-button color="warn" (click)="getBurgerInfos(this.burger.id)">
+      <div *ngIf="showIngredients; else showAllergensText">
+        {{ "button.allergens" | translate }}
+      </div>
+      <ng-template #showAllergensText>
+        {{ "button.ingredients" | translate }}
+      </ng-template>
+    </button>
+    <button class="button-classic" mat-flat-button color="primary">
+      {{ "button.choose" | translate }}
+    </button>
+  </mat-action-row>
+</mat-expansion-panel>
   

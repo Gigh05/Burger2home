@@ -7,7 +7,8 @@
 
       "button": {
         "choose": "Choose",
-        "allergens": "Allergens"
+        "allergens": "Allergens",
+        "ingredients": "Ingredients"
       },
   
       "footer": {

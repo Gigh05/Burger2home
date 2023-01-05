@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { Burger } from 'src/app/api/models';
+import { Allergen, Burger, Ingredient } from 'src/app/api/models';
+import { BurgerService } from 'src/app/api/services';
 import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
@@ -14,9 +15,29 @@ export class SingleBurgerComponent implements OnInit {
   nameLang!: string;
   descriptionLang!: string;
   panelOpenState = false;
+  showIngredients = true;
 
-  constructor() {}
+  constructor(private burgerService: BurgerService) {}
 
   ngOnInit(): void {
+    this.burgerService.getBurgerById({
+      'id': <number>this.burger.id,
+      'Accept-Language': 'fr'
+    }).subscribe(val => this.burger.ingredients = <Ingredient[]>val.ingredients);
+
+    this.burgerService.getBurgerById({
+      'id': <number>this.burger.id,
+      'Accept-Language': 'fr'
+    }).subscribe(val => this.burger.allergens = <Allergen[]>val.allergens);
+  }
+
+  getBurgerInfos(id: number | undefined) {
+    if(this.showIngredients)
+    {
+      this.showIngredients = false
+    }
+    else {
+      this.showIngredients = true
+    }
   }
 }
