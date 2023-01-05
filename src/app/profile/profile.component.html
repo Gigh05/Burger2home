@@ -1,0 +1,38 @@
+<mat-tab-group animationDuration="0ms">
+    <mat-tab label='{{ "profile.tab.tabProfile" | translate }}' class="tab">
+      <div class="container" *ngIf="isLoggedIn; else loggedOut">
+        <header class="jumbotron">
+          <h3>
+            <strong>{{ currentUser.username }}</strong>
+            {{ "profile.label" | translate }}
+          </h3>
+        </header>
+        <p>
+          <strong>{{ "profile.userId" | translate }}:</strong>
+          {{ currentUser.userId }}
+        </p>
+        <p>
+          <strong>{{ "profile.accessToken" | translate }}:</strong>
+          {{ currentUser.accessToken }}
+        </p>
+        <strong>{{ "profile.roles" | translate }}:</strong>
+        <ul>
+          <li *ngFor="let role of currentUser.roles">
+            {{ role }}
+          </li>
+        </ul>
+        <button mat-flat-button color="warn" (click)="logout()">
+          {{ "profile.logout" | translate }}
+        </button>
+      </div>
+    </mat-tab>
+    <mat-tab label='{{ "profile.tab.tabOrders" | translate }}'>
+      <div class="container">
+  
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+    
+    <ng-template #loggedOut>
+      Please login.
+    </ng-template>  

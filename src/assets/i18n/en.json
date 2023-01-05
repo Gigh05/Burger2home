@@ -3,5 +3,44 @@
         "home": "Home",
         "fastfood": "Burger",
         "language":"Language"
+      },
+
+      "button": {
+        "choose": "Choose",
+        "allergens": "Allergens"
+      },
+  
+      "footer": {
+        "social": "Get connected with us on social networks:",
+        "slogan": "Tired of fast food with the same old burgers and fries? Then come to Burger2home and experience the best burgers in town. From our delicious buns and special homemade sauces, to our unbeatable prices, every time you're here it's a truly mouth-watering adventure.",
+        "products": "Products",
+        "usefulLinks": "Useful links"
+      },
+  
+      "login": {
+        "username": "Username",
+        "password": "Password",
+        "signin": "Login",
+        "register": "Create an account"
+      },
+  
+      "register": {
+        "firstname": "Firstname",
+        "lastname": "Lastname",
+        "email": "Email",
+        "password": "Password",
+        "signup": "Sign Up"
+      },
+  
+      "profile": {
+        "label": "Profile",
+        "roles": "Roles",
+        "userId": "UserId",
+        "accessToken": "AccessToken",
+        "logout": "Logout",
+        "tab": {
+          "tabProfile": "Profile",
+          "tabOrders": "Orders"
+        }
       }
 }

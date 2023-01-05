@@ -1,0 +1,19 @@
+  <mat-expansion-panel hideToggle class="burger-expansion">
+    <mat-expansion-panel-header class="burger-expansion-header">
+      <img class="burger-expansion-image" [src]="burger.imageUrl">
+      <mat-panel-title>
+        {{ burger.name }}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ burger.description }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ul>
+      <li *ngFor="let ingredient of burger.ingredients">{{ ingredient }}</li>
+    </ul>
+    <mat-action-row>
+      <button class="button-warn" mat-flat-button color="warn">{{ "button.allergens" | translate }}</button>
+      <button class="button-classic" mat-flat-button color="primary">{{ "button.choose" | translate }}</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+  

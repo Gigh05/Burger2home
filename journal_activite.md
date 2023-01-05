@@ -60,6 +60,7 @@
 
 ## Semaine 52
 - [x] 2022/12/30 : Mise à jour du Swagger
+- [x] 2023/01/01 : Ajout de la liste des burgers, de la connexion, de l'inscription et du profil
 
 ## Semaine 1
 - [ ] 2023/01/08 : Code final
