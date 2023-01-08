@@ -6,13 +6,13 @@ import { ApiConfiguration, ApiConfigurationParams } from './api-configuration';
 
 import { ProductService } from './services/product.service';
 import { AccountsService } from './services/accounts.service';
+import { CartsService } from './services/carts.service';
 import { AuthenticationService } from './services/authentication.service';
 import { GeneralService } from './services/general.service';
 import { DrinkService } from './services/drink.service';
 import { DessertService } from './services/dessert.service';
 import { BurgerService } from './services/burger.service';
 import { OrdersService } from './services/orders.service';
-import { CartsService } from './services/carts.service';
 
 /**
  * Module that provides all services and configuration.
@@ -24,13 +24,13 @@ import { CartsService } from './services/carts.service';
   providers: [
     ProductService,
     AccountsService,
+    CartsService,
     AuthenticationService,
     GeneralService,
     DrinkService,
     DessertService,
     BurgerService,
     OrdersService,
-    CartsService,
     ApiConfiguration
   ],
 })

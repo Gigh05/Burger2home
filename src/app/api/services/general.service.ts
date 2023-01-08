@@ -36,12 +36,14 @@ export class GeneralService extends BaseService {
    * This method doesn't expect any request body.
    */
   getAllPromo$Response(params?: {
+    'Accept-Language'?: 'fr' | 'en';
     context?: HttpContext
   }
 ): Observable<StrictHttpResponse<Array<Promo>>> {
 
     const rb = new RequestBuilder(this.rootUrl, GeneralService.GetAllPromoPath, 'get');
     if (params) {
+      rb.header('Accept-Language', params['Accept-Language'], {});
     }
 
     return this.http.request(rb.build({
@@ -63,6 +65,7 @@ export class GeneralService extends BaseService {
    * This method doesn't expect any request body.
    */
   getAllPromo(params?: {
+    'Accept-Language'?: 'fr' | 'en';
     context?: HttpContext
   }
 ): Observable<Array<Promo>> {

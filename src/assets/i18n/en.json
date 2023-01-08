@@ -2,6 +2,8 @@
     "nav": {
         "home": "Home",
         "fastfood": "Burger",
+        "drinks": "Drinks",
+        "desserts": "Desserts",
         "language":"Language"
       },
 
@@ -35,13 +37,23 @@
   
       "profile": {
         "label": "Profile",
+        "profileTab": "Profile",
+        "ordersTab": "Orders",
         "roles": "Roles",
         "userId": "UserId",
         "accessToken": "AccessToken",
-        "logout": "Logout",
-        "tab": {
-          "tabProfile": "Profile",
-          "tabOrders": "Orders"
-        }
+        "firstname": "Firstname",
+        "lastname": "Lastname",
+        "street": "Street",
+        "number": "Number",
+        "box": "Box",
+        "city": "City",
+        "postcode": "Postcode",
+        "language": "Language",
+        "phone": "Phone",
+        "email": "Email",
+        "password": "Password",
+        "update": "Update",
+        "logout": "Logout"
       }
 }

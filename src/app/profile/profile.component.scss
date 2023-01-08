@@ -31,3 +31,53 @@
         word-break: break-all;
     }
 }
+
+#profileForm {
+    .form-group {
+        margin-bottom: 15px;
+
+        h4 {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px 25px 25px 25px;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+    .profile-img-card {
+        width: 100%;
+        max-width: 100px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .alert {
+        margin-top: 10px;
+    }
+
+    .btn {
+        background: #388E3C;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media(min-width: 992px){
+    .card-container {
+      max-width: 600px;
+    }
+}

@@ -1,38 +1,182 @@
 <mat-tab-group animationDuration="0ms">
-    <mat-tab label='{{ "profile.tab.tabProfile" | translate }}' class="tab">
-      <div class="container" *ngIf="isLoggedIn; else loggedOut">
-        <header class="jumbotron">
-          <h3>
-            <strong>{{ currentUser.username }}</strong>
-            {{ "profile.label" | translate }}
-          </h3>
-        </header>
-        <p>
-          <strong>{{ "profile.userId" | translate }}:</strong>
-          {{ currentUser.userId }}
-        </p>
-        <p>
-          <strong>{{ "profile.accessToken" | translate }}:</strong>
-          {{ currentUser.accessToken }}
-        </p>
-        <strong>{{ "profile.roles" | translate }}:</strong>
-        <ul>
-          <li *ngFor="let role of currentUser.roles">
-            {{ role }}
-          </li>
-        </ul>
+  <mat-tab label='{{ "profile.profileTab" | translate }}'>
+    <div class="container register-container">
+      <div class="card card-container">
+        <img
+          id="profile-img"
+          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+          class="profile-img-card"
+        />
+        <form
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+        <!--Firstname-->
+          <div class="form-group">
+            <label for="firstname">{{ "profile.firstname" | translate }}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="firstname"
+              [(ngModel)]="form.firstname"
+              required
+              minlength="3"
+              maxlength="20"
+              #firstname="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && firstname.errors }"
+            />
+            <div class="invalid-feedback" *ngIf="firstname.errors && f.submitted">
+              <div *ngIf="firstname.errors['required']">Firstname is required</div>
+              <div *ngIf="firstname.errors['minlength']">
+                Firstname must be at least 3 characters
+              </div>
+              <div *ngIf="firstname.errors['maxlength']">
+                Firstname must be at most 20 characters
+              </div>
+            </div>
+          </div>
+          <!--Lastname-->
+          <div class="form-group">
+            <label for="lastname">{{ "profile.lastname" | translate }}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="lastname"
+              [(ngModel)]="form.lastname"
+              required
+              minlength="3"
+              maxlength="20"
+              #lastname="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && lastname.errors }"
+            />
+            <div class="invalid-feedback" *ngIf="lastname.errors && f.submitted">
+              <div *ngIf="lastname.errors['required']">Lastname is required</div>
+              <div *ngIf="lastname.errors['minlength']">
+                Lastname must be at least 3 characters
+              </div>
+              <div *ngIf="lastname.errors['maxlength']">
+                Lastname must be at most 20 characters
+              </div>
+            </div>
+          </div>
+          <!--Street-->
+          <div class="form-group">
+            <label for="street">{{ "profile.street" | translate }}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="street"
+              [(ngModel)]="form.street"
+              required
+              #street="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && street.errors }"
+            />
+            <div class="invalid-feedback" *ngIf="street.errors && f.submitted">
+              <div *ngIf="street.errors['required']">Street is required</div>
+            </div>
+          </div>
+          <!--Number-->
+          <div class="form-group">
+            <label for="number">{{ "profile.number" | translate }}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="number"
+              [(ngModel)]="form.number"
+              required
+              #number="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && number.errors }"
+            />
+            <div class="invalid-feedback" *ngIf="street.errors && f.submitted">
+              <div *ngIf="street.errors['required']">Number is required</div>
+            </div>
+          </div>
+          <!--Box-->
+          <div class="form-group">
+            <label for="box">{{ "profile.box" | translate }}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="box"
+              [(ngModel)]="form.box"
+              required
+              #box="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && box.errors }"
+            />
+            <div class="invalid-feedback" *ngIf="box.errors && f.submitted">
+              <div *ngIf="box.errors['required']">Box is required</div>
+            </div>
+          </div>
+          <!--City-->
+          <div class="form-group">
+            <label for="city">{{ "profile.city" | translate }}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="city"
+              [(ngModel)]="form.city"
+              required
+              #city="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && city.errors }"
+            />
+            <div class="invalid-feedback" *ngIf="city.errors && f.submitted">
+              <div *ngIf="city.errors['required']">City is required</div>
+            </div>
+          </div>
+          <!--Postcode-->
+          <div class="form-group">
+            <label for="postcode">{{ "profile.postcode" | translate }}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="postcode"
+              [(ngModel)]="form.postcode"
+              required
+              #postcode="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && postcode.errors }"
+            />
+            <div class="invalid-feedback" *ngIf="postcode.errors && f.submitted">
+              <div *ngIf="postcode.errors['required']">Postcode is required</div>
+            </div>
+          </div>
+          <!--Phone-->
+          <div class="form-group">
+            <label for="phone">{{ "profile.phone" | translate }}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="phone"
+              [(ngModel)]="form.phone"
+              #phone="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && phone.errors }"
+            />
+          </div>
+          <!--Password-->
+          <div class="form-group">
+            <button class="btn btn-primary btn-block">{{ "profile.update" | translate }}</button>
+          </div>
+    
+          <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+            Signup failed!<br />{{ errorMessage }}
+          </div>
+        </form>
+
         <button mat-flat-button color="warn" (click)="logout()">
           {{ "profile.logout" | translate }}
         </button>
-      </div>
-    </mat-tab>
-    <mat-tab label='{{ "profile.tab.tabOrders" | translate }}'>
-      <div class="container">
-  
-      </div>
-    </mat-tab>
-  </mat-tab-group>
     
-    <ng-template #loggedOut>
-      Please login.
-    </ng-template>  
+        <div class="alert alert-success" *ngIf="isSuccessful">
+          Your registration is successful!
+        </div>
+      </div>
+    </div>
+    
+  </mat-tab>
+  <mat-tab label='{{ "profile.ordersTab" | translate }}'>
+    <div class="container">
+
+    </div>
+  </mat-tab>
+</mat-tab-group>

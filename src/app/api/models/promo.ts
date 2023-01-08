@@ -6,6 +6,7 @@ export interface Promo {
   endDate?: string;
   id?: number;
   productId?: number;
-  productUrl?: string;
+  productName?: string;
+  startDate?: string;
   type?: PromoType;
 }

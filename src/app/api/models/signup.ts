@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export interface Signup {
-  email?: string;
+  email: string;
   firstname: string;
   lastname: string;
   password: string;

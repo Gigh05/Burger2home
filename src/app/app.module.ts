@@ -23,6 +23,13 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SingleBurgerComponent } from './burgers/single-burger/single-burger.component';
 import { BurgerListComponent } from './burgers/burger-list/burger-list.component';
+import { DessertListComponent } from './desserts/dessert-list/dessert-list.component';
+import { SingleDessertComponent } from './desserts/single-dessert/single-dessert.component';
+import { DrinkListComponent } from './drinks/drink-list/drink-list.component';
+import { SingleDrinkComponent } from './drinks/single-drink/single-drink.component';
+import { httpInterceptorProviders } from './helpers/http.interceptor';
+import { CartListComponent } from './cart/cart-list/cart-list.component';
+import { CartProductComponent } from './cart/cart-product/cart-product.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +41,13 @@ import { BurgerListComponent } from './burgers/burger-list/burger-list.component
     RegisterComponent,
     ProfileComponent,
     SingleBurgerComponent,
-    BurgerListComponent
+    BurgerListComponent,
+    DessertListComponent,
+    SingleDessertComponent,
+    DrinkListComponent,
+    SingleDrinkComponent,
+    CartListComponent,
+    CartProductComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +65,7 @@ import { BurgerListComponent } from './burgers/burger-list/burger-list.component
     NgxTranslateModule,
     FormsModule
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

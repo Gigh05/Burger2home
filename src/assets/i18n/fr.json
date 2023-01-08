@@ -2,6 +2,8 @@
     "nav": {
         "home": "Accueil",
         "fastfood": "Burger",
+        "drinks": "Boissons",
+        "desserts": "Desserts",
         "language":"Langage"
       },
 
@@ -35,13 +37,23 @@
     
       "profile": {
         "label": "Profil",
+        "profileTab": "Profil",
+        "ordersTab": "Commandes",
         "Roles": "Rôles",
         "userId": "ID utilisateur",
         "accessToken": "Jeton d'accès",
-        "logout": "Déconnexion",
-        "tab": {
-          "tabProfile": "Profil",
-          "tabOrders": "Commandes"
-        }
+        "firstname": "Prénom",
+        "lastname": "Nom",
+        "street": "Rue",
+        "number": "Numéro",
+        "box": "Boîte",
+        "city": "Ville",
+        "postcode": "Code postal",
+        "language": "Langue",
+        "phone": "Téléphone",
+        "email": "Email",
+        "password": "Mot de passe",
+        "update": "Modifier",
+        "logout": "Déconnexion"
       }
 }

@@ -73,4 +73,109 @@ export class CartsService extends BaseService {
     );
   }
 
+  /**
+   * Path part for operation updateCart
+   */
+  static readonly UpdateCartPath = '/api/accounts/{userId}/cart';
+
+  /**
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `updateCart()` instead.
+   *
+   * This method sends `application/json` and handles request body of type `application/json`.
+   */
+  updateCart$Response(params: {
+    userId: string;
+    context?: HttpContext
+    body: Cart
+  }
+): Observable<StrictHttpResponse<Cart>> {
+
+    const rb = new RequestBuilder(this.rootUrl, CartsService.UpdateCartPath, 'put');
+    if (params) {
+      rb.path('userId', params.userId, {});
+      rb.body(params.body, 'application/json');
+    }
+
+    return this.http.request(rb.build({
+      responseType: 'json',
+      accept: 'application/json',
+      context: params?.context
+    })).pipe(
+      filter((r: any) => r instanceof HttpResponse),
+      map((r: HttpResponse<any>) => {
+        return r as StrictHttpResponse<Cart>;
+      })
+    );
+  }
+
+  /**
+   * This method provides access to only to the response body.
+   * To access the full response (for headers, for example), `updateCart$Response()` instead.
+   *
+   * This method sends `application/json` and handles request body of type `application/json`.
+   */
+  updateCart(params: {
+    userId: string;
+    context?: HttpContext
+    body: Cart
+  }
+): Observable<Cart> {
+
+    return this.updateCart$Response(params).pipe(
+      map((r: StrictHttpResponse<Cart>) => r.body as Cart)
+    );
+  }
+
+  /**
+   * Path part for operation validateCart
+   */
+  static readonly ValidateCartPath = '/api/accounts/{userId}/cart/validate';
+
+  /**
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `validateCart()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  validateCart$Response(params: {
+    userId: string;
+    context?: HttpContext
+  }
+): Observable<StrictHttpResponse<void>> {
+
+    const rb = new RequestBuilder(this.rootUrl, CartsService.ValidateCartPath, 'post');
+    if (params) {
+      rb.path('userId', params.userId, {});
+    }
+
+    return this.http.request(rb.build({
+      responseType: 'text',
+      accept: '*/*',
+      context: params?.context
+    })).pipe(
+      filter((r: any) => r instanceof HttpResponse),
+      map((r: HttpResponse<any>) => {
+        return (r as HttpResponse<any>).clone({ body: undefined }) as StrictHttpResponse<void>;
+      })
+    );
+  }
+
+  /**
+   * This method provides access to only to the response body.
+   * To access the full response (for headers, for example), `validateCart$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  validateCart(params: {
+    userId: string;
+    context?: HttpContext
+  }
+): Observable<void> {
+
+    return this.validateCart$Response(params).pipe(
+      map((r: StrictHttpResponse<void>) => r.body as void)
+    );
+  }
+
 }

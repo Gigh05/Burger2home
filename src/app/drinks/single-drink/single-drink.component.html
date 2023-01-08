@@ -1,0 +1,16 @@
+<mat-expansion-panel hideToggle class="burger-expansion">
+  <mat-expansion-panel-header class="burger-expansion-header">
+    <img class="burger-expansion-image" [src]="drink.imageUrl">
+    <mat-panel-title>
+      {{ drink.name }}
+    </mat-panel-title>
+    <mat-panel-description>
+      {{ drink.description }}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <mat-action-row>
+    <button class="button-classic" mat-flat-button color="primary">
+      {{ "button.choose" | translate }}
+    </button>
+  </mat-action-row>
+</mat-expansion-panel>

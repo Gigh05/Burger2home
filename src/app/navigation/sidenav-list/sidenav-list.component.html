@@ -3,7 +3,13 @@
         <mat-icon>home</mat-icon> <span class="nav-caption">{{ "nav.home" | translate }}</span>
     </a>
     <a mat-list-item routerLink="/burgers" (click)="onSidenavClose()">
-        <mat-icon>fastfood</mat-icon> <span class="nav-caption">{{ "nav.fastfood" | translate }}</span>   
+        <mat-icon>lunch_dining</mat-icon> <span class="nav-caption">{{ "nav.fastfood" | translate }}</span>   
+    </a>
+    <a mat-list-item routerLink="/drinks" (click)="onSidenavClose()">
+      <mat-icon>wine_bar</mat-icon> <span class="nav-caption">{{ "nav.drinks" | translate }}</span>   
+    </a>
+    <a mat-list-item routerLink="/desserts" (click)="onSidenavClose()">
+        <mat-icon>icecream</mat-icon> <span class="nav-caption">{{ "nav.desserts" | translate }}</span>   
     </a>
     <mat-list-item [matMenuTriggerFor]="languageMenu">
         <mat-icon>flag</mat-icon>

@@ -1,0 +1,69 @@
+.burger-card {
+  margin: 15px auto;
+
+  .mat-card-sm-image {
+    margin: 0;
+    height: 100%;
+  }
+
+  .home-card-content {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: auto;
+      max-width: 50%;
+
+      &:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      &:last-child {
+        flex-direction: column;
+        align-items: start;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+.burger-expansion {
+  margin: 15px auto;
+  min-height: 100px;
+
+  .burger-expansion-header {
+    min-height: 100px;
+
+    .burger-expansion-image {
+      width: 100%;
+      max-width: 80px;
+    }
+  }
+
+  .button-classic {
+    background-color: #388E3C;
+    color: #fff;
+  }
+
+  .button-warn {
+    background-color: #FF5252;
+    color: #fff;
+  }
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+@media(min-width: 992px){
+  .burger-card {
+    max-width: 400px;
+  }
+  .burger-expansion {
+    max-width: 400px;
+  }
+}
