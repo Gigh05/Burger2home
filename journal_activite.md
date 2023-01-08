@@ -65,4 +65,5 @@
 ## Semaine 1
 - [x] 2023/01/05 : Ajout des ingrédients et allergènes sur la carte des burgers
 - [x] 2023/01/07 : Ajout de la page des boissons, des desserts et du design de la page du panier
+- [x] 2023/01/08 : Ajout d'une traduction complète de l'application, choix du burger avec extra, affichage dans le panier
 - [ ] 2023/01/08 : Code final

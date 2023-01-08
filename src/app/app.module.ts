@@ -17,6 +17,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { NgxTranslateModule } from './translate/translate.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -30,6 +32,7 @@ import { SingleDrinkComponent } from './drinks/single-drink/single-drink.compone
 import { httpInterceptorProviders } from './helpers/http.interceptor';
 import { CartListComponent } from './cart/cart-list/cart-list.component';
 import { CartProductComponent } from './cart/cart-product/cart-product.component';
+import { BurgerExtraComponent } from './burgers/burger-extra/burger-extra.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,8 @@ import { CartProductComponent } from './cart/cart-product/cart-product.component
     DrinkListComponent,
     SingleDrinkComponent,
     CartListComponent,
-    CartProductComponent
+    CartProductComponent,
+    BurgerExtraComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +66,8 @@ import { CartProductComponent } from './cart/cart-product/cart-product.component
     MatExpansionModule,
     MatTabsModule,
     MatTableModule,
+    MatCheckboxModule,
+    MatBottomSheetModule,
     NgxTranslateModule,
     FormsModule
   ],

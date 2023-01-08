@@ -1,0 +1,31 @@
+<mat-nav-list>
+    <form
+      name="form"
+      (ngSubmit)="onSubmit()"
+      #f="ngForm"
+      novalidate
+    >
+    <section class="exta-section form-group" *ngFor="let ingredient of this.BurgerIngredients">
+        <mat-checkbox
+            class="example-margin"
+            checked="true"
+            [(ngModel)]="ingredient.selected"
+            [ngModelOptions]="{standalone: true}"
+            [disabled]="true"
+        >{{ ingredient.name }}</mat-checkbox>
+    </section>
+    <section class="exta-section form-group" *ngFor="let ingredient of this.FinalIngredients">
+        <mat-checkbox
+            class="example-margin"
+            checked="false"
+            [(ngModel)]="ingredient.selected"
+            [ngModelOptions]="{standalone: true}"
+        >{{ ingredient.name }}</mat-checkbox>
+    </section>
+    <div class="form-group">
+        <button class="button-classic" mat-flat-button color="primary">
+            {{ "button.choose" | translate }}
+        </button>
+      </div>
+  </form>
+</mat-nav-list>

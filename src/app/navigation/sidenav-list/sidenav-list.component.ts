@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sidenav-list',
@@ -15,7 +16,8 @@ export class SidenavListComponent implements OnInit {
     { code: 'fr', label: 'Français' },
   ];
 
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService,
+    private router: Router) { }
 
   changeSiteLanguage(localeCode: string): void {
     const selectedLanguage = this.languageList
@@ -30,10 +32,22 @@ export class SidenavListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.translate.onLangChange
+    .subscribe((event: LangChangeEvent) => {
+      this.reloadComponent(true);
+    });
   }
 
   public onSidenavClose = () => {
     this.sidenavClose.emit();
   }
+
+  reloadComponent(self:boolean,urlToNavigateTo ?:string){
+   const url=self ? this.router.url :urlToNavigateTo;
+   this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+     this.router.navigate([`/${url}`]).then(()=>{
+     })
+   })
+ }
 
 }

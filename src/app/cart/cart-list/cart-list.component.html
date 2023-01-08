@@ -1,186 +1,67 @@
 
     
         <section class="main-container padding-y bg-light">
-            <div class="container">
-            
-            <!-- =================== COMPONENT CART+SUMMARY ====================== -->
-            <div class="row">
-              <div class="col-lg-9">
-            
-                <div class="card">
-                <div class="content-body">
-                  <h4 class="card-title">Your shopping cart</h4>
-                  <article class="row gy-3 mb-4">
-                    <div class="col-lg-5">
-                      <figure class="itemside me-lg-5 d-flex">
-                        <div class="aside"><img src="" class="img-sm img-thumbnail"></div>
-                        <figcaption class="info">
-                          <a href="#" class="title">Le volant</a>
-                          <p class="text-muted"> Burger de poulet pané sur son lit d’iceberg </p>
-                        </figcaption>
-                      </figure>
-                    </div>
-                    <div class="number-spinner col-lg-2 col-sm-4 col-6 d-flex mb-4" style="max-width: 300px">
-                        <button class="btn btn-primary px-2 me-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                          <i class="fa fa-minus"></i>
-                        </button>
-      
-                        <div class="form-outline">
-                          <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control" />
-                        </div>
-      
-                        <button class="btn btn-primary px-2 ms-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                          <i class="fa fa-plus"></i>
-                        </button>
-                      </div>
-                      <!-- Quantity -->
-                    <div class="col-lg-2 col-sm-4 col-4">
-                      <div class="price-wrap lh-sm"> 
-                        <var class="price h6">12,00€</var>  <br>
-                        <small class="text-muted"> 12,00€ per unit </small> 
-                      </div> <!-- price-wrap .// -->
-                    </div>
-                    <div class="col-lg col-sm-4 col-2">
-                      <div class="float-lg-end">
-                        <button class="btn btn-light text-danger">
-                          <i class="fa fa-times"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </article> <!-- row.// -->
-            
-                  <article class="row gy-3 mb-4">
-                    <div class="col-lg-5">
-                      <figure class="itemside me-lg-5 d-flex">
-                        <div class="aside"><img src="" class="img-sm img-thumbnail"></div>
-                        <figcaption class="info">
-                          <a href="#" class="title">L’effrayant</a>
-                          <p class="text-muted"> Burger au thème d’haloween </p>
-                        </figcaption>
-                      </figure>
-                    </div>
-                    <div class="number-spinner d-flex mb-4" style="max-width: 300px">
-                        <button class="btn btn-primary px-2 me-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                          <i class="fa fa-minus"></i>
-                        </button>
-      
-                        <div class="form-outline">
-                          <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control" />
-                        </div>
-      
-                        <button class="btn btn-primary px-2 ms-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                          <i class="fa fa-plus"></i>
-                        </button>
-                      </div>
-                      <!-- Quantity -->
-                    <div class="col-lg-2 col-sm-4 col-4">
-                      <div class="price-wrap lh-sm"> 
-                        <var class="price h6">14,80€</var>  <br>
-                        <small class="text-muted"> 14,80€ per unit </small> 
-                      </div> <!-- price-wrap .// -->
-                    </div>
-                    <div class="col-lg col-sm-4 col-2">
-                      <div class="float-lg-end">
-                        <button class="btn btn-light text-danger">
-                          <i class="fa fa-times"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </article> <!-- row.// -->
-            
-                  <article class="row gy-3 mb-4">
-                    <div class="col-lg-5">
-                      <figure class="itemside me-lg-5 d-flex">
-                        <div class="aside"><img src="" class="img-sm img-thumbnail"></div>
-                        <figcaption class="info">
-                          <a href="#" class="title">L’irresistible</a>
-                          <p class="text-muted"> Burger dégoulinant de goût... </p>
-                        </figcaption>
-                      </figure>
-                    </div>
-                    <div class="number-spinner d-flex mb-4" style="max-width: 300px">
-                        <button class="btn btn-primary px-2 me-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                          <i class="fa fa-minus"></i>
-                        </button>
-      
-                        <div class="form-outline">
-                          <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control" />
-                        </div>
-      
-                        <button class="btn btn-primary px-2 ms-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                          <i class="fa fa-plus"></i>
-                        </button>
-                      </div>
-                      <!-- Quantity -->
-                    <div class="col-lg-2 col-sm-4 col-4">
-                      <div class="price-wrap lh-sm"> 
-                        <var class="price h6">15,00€</var>  <br>
-                        <small class="text-muted"> 15,00€ per unit </small> 
-                      </div> <!-- price-wrap .// -->
-                    </div>
-                    <div class="col-lg col-sm-4 col-2">
-                      <div class="float-lg-end">
-                        <button class="btn btn-light text-danger">
-                          <i class="fa fa-times"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </article> <!-- row.// -->
-            
-                </div> <!-- card-body .// -->
-            
-                <div class="address-card content-body">
-                  <p><i class="me-2 text-muted fa-lg fa fa-truck"></i> Delivery address</p>
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                </div> <!-- card-body.// -->
-            
-                </div> <!-- card.// -->
-            
-              </div> <!-- col.// -->
-              <aside class="col-lg-3">
-            
-                <div class="card">
-                <div class="card-body">
-                  <dl class="dlist-align">
-                    <dt>Total price:</dt>
-                    <dd class="text-end"> 41,80€</dd>
-                  </dl>
-                  <dl class="dlist-align">
-                    <dt>Discount:</dt>
-                    <dd class="text-end text-success"> - 0,00€ </dd>
-                  </dl>
-                  <dl class="dlist-align">
-                    <dt>TAX:</dt>
-                    <dd class="text-end"> 8,78€ </dd>
-                  </dl>
-                  <hr>
-                  <dl class="dlist-align">
-                    <dt>Total:</dt>
-                    <dd class="text-end text-dark h5"> 50,58€ </dd>
-                  </dl>
-                  
-                  <div class="d-grid gap-2 my-3">
-                    <a href="#" class="btn btn-success w-100"> Make Purchase </a>
-                    <a href="#" class="btn btn-light w-100"> Back to shop </a>
-                  </div>
-                </div> <!-- card-body.// -->
-                </div> <!-- card.// -->
-            
-              </aside> <!-- col.// -->
-            
-            </div> <!-- row.// -->
-            <!-- =================== COMPONENT 1 CART+SUMMARY .//END  ====================== -->
-            
-            <br><br>
-            
-            </div> <!-- container .//  -->
-            </section>
-            <!-- ============== SECTION END// ============== -->
+          <div class="container">
+          
+          <!-- =================== COMPONENT CART+SUMMARY ====================== -->
+          <div class="row">
+            <div class="col-lg-9">
+          
+              <div class="card">
+              <div class="content-body">
+                <h4 class="card-title">{{ "cart.shopping" | translate }}</h4>
+  
+                <app-cart-product *ngFor="let cartItem of cartItems" [cartItem]="cartItem"></app-cart-product>
+          
+              </div> <!-- card-body .// -->
+          
+              <div class="address-card content-body">
+                <p><i class="me-2 text-muted fa-lg fa fa-truck"></i>{{ "cart.delivery" | translate }}</p>
+                <p class="text-muted" *ngIf="address.street else addressEmpty">{{address.street}} {{address.number}}/{{address.box}}, {{address.city}} {{address.postcode}}</p>
+                <ng-template #addressEmpty>
+                  {{ "cart.please" | translate }} <a [routerLink]="['/profile']">{{ "cart.profile" | translate }}</a>.
+                </ng-template>  
+              </div> <!-- card-body.// -->
+          
+              </div> <!-- card.// -->
+          
+            </div> <!-- col.// -->
+            <aside class="col-lg-3">
+          
+              <div class="card">
+              <div class="card-body">
+                <dl class="dlist-align">
+                  <dt>{{ "cart.totalPrice" | translate }}:</dt>
+                  <dd class="text-end"> {{totalPrice}}€</dd>
+                </dl>
+                <dl class="dlist-align">
+                  <dt>{{ "cart.discount" | translate }}:</dt>
+                  <dd class="text-end text-success"> {{discount | number: '1.2-2'}}€ </dd>
+                </dl>
+                <dl class="dlist-align">
+                  <dt>{{ "cart.tax" | translate }}:</dt>
+                  <dd class="text-end"> {{tax | number: '1.2-2'}}€ </dd>
+                </dl>
+                <hr>
+                <dl class="dlist-align">
+                  <dt>{{ "cart.total" | translate }}:</dt>
+                  <dd class="text-end text-dark h5"> {{total}}€ </dd>
+                </dl>
+                
+                <div class="d-grid gap-2 my-3">
+                  <a href="#" class="btn btn-success w-100"> {{ "cart.purchase" | translate }} </a>
+                  <a href="#" class="btn btn-light w-100"> {{ "cart.back" | translate }} </a>
+                </div>
+              </div> <!-- card-body.// -->
+              </div> <!-- card.// -->
+          
+            </aside> <!-- col.// -->
+          
+          </div> <!-- row.// -->
+          <!-- =================== COMPONENT 1 CART+SUMMARY .//END  ====================== -->
+          
+          <br><br>
+          
+          </div> <!-- container .//  -->
+          </section>
+          <!-- ============== SECTION END// ============== -->

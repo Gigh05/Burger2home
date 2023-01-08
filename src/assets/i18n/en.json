@@ -17,7 +17,15 @@
         "social": "Get connected with us on social networks:",
         "slogan": "Tired of fast food with the same old burgers and fries? Then come to Burger2home and experience the best burgers in town. From our delicious buns and special homemade sauces, to our unbeatable prices, every time you're here it's a truly mouth-watering adventure.",
         "products": "Products",
-        "usefulLinks": "Useful links"
+        "usefulLinks": "Useful links",
+        "home": "Home",
+        "fastfood": "Burgers",
+        "drinks": "Drinks",
+        "desserts": "Desserts",
+        "login": "Sign in",
+        "register": "Sign up",
+        "profile": "Profile",
+        "cart": "Cart"
       },
   
       "login": {
@@ -55,5 +63,19 @@
         "password": "Password",
         "update": "Update",
         "logout": "Logout"
+      },
+      
+      "cart": {
+        "shopping": "Your shopping cart",
+        "delivery": "Delivery address",
+        "please": "Please enter an address in your",
+        "profile": "profile",
+        "unit": "per unit",
+        "totalPrice": "Total price",
+        "discount": "Discount",
+        "tax": "TAX",
+        "total": "Total",
+        "purchase": "Make Purchase",
+        "back": "Back to shop "
       }
 }

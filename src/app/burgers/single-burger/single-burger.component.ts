@@ -2,6 +2,8 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { Allergen, Burger, Ingredient } from 'src/app/api/models';
 import { BurgerService } from 'src/app/api/services';
 import { MatAccordion } from '@angular/material/expansion';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { BurgerExtraComponent } from '../burger-extra/burger-extra.component';
 
 @Component({
   selector: 'app-single-burger',
@@ -17,7 +19,8 @@ export class SingleBurgerComponent implements OnInit {
   panelOpenState = false;
   showIngredients = true;
 
-  constructor(private burgerService: BurgerService) {}
+  constructor(private burgerService: BurgerService,
+    private bottomSheet: MatBottomSheet) {}
 
   ngOnInit(): void {
     this.burgerService.getBurgerById({
@@ -39,5 +42,12 @@ export class SingleBurgerComponent implements OnInit {
     else {
       this.showIngredients = true
     }
+  }
+
+  openBottomSheet(): void {
+    this.bottomSheet.open(BurgerExtraComponent, {
+      panelClass: 'justify-content-center',
+      data: { 'burger': this.burger }
+    });
   }
 }

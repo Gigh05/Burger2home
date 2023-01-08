@@ -17,7 +17,15 @@
         "social": "Connectez-vous à nos réseaux sociaux :",
         "slogan": "Fatigué des fast-foods avec les mêmes vieux burgers et frites ? Alors venez chez Burger2home et faites l'expérience des meilleurs hamburgers de la ville. De nos délicieux petits pains et nos sauces spéciales faites maison, à nos prix imbattables, chaque fois que vous êtes ici, c'est une aventure vraiment alléchante.",
         "products": "Produits",
-        "usefulLinks": "Liens utiles"
+        "usefulLinks": "Liens utiles",
+        "home": "Accueil",
+        "fastfood": "Burgers",
+        "drinks": "Boissons",
+        "desserts": "Desserts",
+        "login": "Connexion",
+        "register": "S'inscrire",
+        "profile": "Profil",
+        "cart": "Panier"
       },
     
       "login": {
@@ -55,5 +63,19 @@
         "password": "Mot de passe",
         "update": "Modifier",
         "logout": "Déconnexion"
+      },
+
+      "cart": {
+        "shopping": "Votre panier d'achat",
+        "delivery": "Adresse de livraison",
+        "please": "Veuillez saisir une adresse dans votre",
+        "profile": "profil",
+        "unit": "l'unité",
+        "totalPrice": "Prix total",
+        "discount": "Réduction",
+        "tax": "TAX",
+        "total": "Total",
+        "purchase": "Effectuer l'achat",
+        "back": "Retour au magasin "
       }
 }

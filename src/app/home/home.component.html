@@ -58,16 +58,16 @@
             {{ "footer.products" | translate }}
           </h4>
           <p>
-            <a href="#!" class="text-reset">Angular</a>
+            <a [routerLink]="['/home']" class="text-reset">{{ "footer.home" | translate }}</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">React</a>
+            <a [routerLink]="['/burgers']" class="text-reset">{{ "footer.fastfood" | translate }}</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vue</a>
+            <a [routerLink]="['/drinks']" class="text-reset">{{ "footer.drinks" | translate }}</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Laravel</a>
+            <a [routerLink]="['/desserts']" class="text-reset">{{ "footer.desserts" | translate }}</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -79,16 +79,16 @@
             {{ "footer.usefulLinks" | translate }}
           </h4>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a [routerLink]="['/profile']" class="text-reset">{{ "footer.profile" | translate }}</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a [routerLink]="['/login']" class="text-reset">{{ "footer.login" | translate }}</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a [routerLink]="['/register']" class="text-reset">{{ "footer.register" | translate }}</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Help</a>
+            <a [routerLink]="['/cart']" class="text-reset">{{ "footer.cart" | translate }}</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -117,7 +117,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2023 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Burger2Home</a>
+    <a class="text-reset fw-bold" href="#!">Burger2Home</a>
   </div>
   <!-- Copyright -->
 </footer>
